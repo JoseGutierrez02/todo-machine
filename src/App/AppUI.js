@@ -10,6 +10,7 @@ import { EmptyTodos } from '../EmptyTodos';
 import { TodoContext } from '../TodoContext';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
+import './AppUi.css';
 
 
 function AppUi () {
@@ -24,7 +25,7 @@ function AppUi () {
   } = React.useContext(TodoContext)
   
   return (
-    <>
+    <div className='AppUI-container'>
       <TodoCounter />
       <TodoSearcher />
 
@@ -58,7 +59,7 @@ function AppUi () {
           <TodoForm />
         </Modal>
       )}
-    </>
+    </div>
   );
 }
 
