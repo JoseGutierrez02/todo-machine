@@ -1,9 +1,6 @@
-import React from 'react';
-import { TodoContext } from '../TodoContext';
 import './index.css';
 
-function TodoCounter() {
-  const { completedTodos, totalTodos, loading } = React.useContext(TodoContext)
+function TodoCounter({ completedTodos, totalTodos, loading }) {
   let title = <span>Has completado <span>{completedTodos}</span> de <span>{totalTodos}</span> TODOs</span>
 
   if (loading || totalTodos === 0) title = null

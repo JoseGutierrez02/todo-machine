@@ -1,0 +1,9 @@
+.MessageInfo {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.MessageInfo--error {
+  color: red;
+}
