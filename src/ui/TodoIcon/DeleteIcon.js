@@ -1,4 +1,4 @@
-import { TodoIcon } from './'
+import { TodoIcon } from '.'
 
 function DeleteIcon({ onDeleteTodo }) {
   return (

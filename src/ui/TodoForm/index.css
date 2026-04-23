@@ -1,8 +1,9 @@
 form {
-  width: 90%;
+  width: 100%;
   max-width: 300px;
-  background-color: #fff;
-  padding: 33px 40px;
+  /* background-color: #fff; */
+  margin: 0 auto;
+  padding: 33px 20px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,10 +1,11 @@
 {
-  "name": "platzi-intro-react-base",
+  "name": "todo-machine",
   "version": "0.1.0",
   "dependencies": {
     "ajv": "^8.17.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-router-dom": "^6.30.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

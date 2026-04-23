@@ -1,4 +1,4 @@
-import { TodoIcon } from './'
+import { TodoIcon } from '.'
 
 function CompleteIcon({ completed, onCheckTodo }) {
   const green = "#4caf50"

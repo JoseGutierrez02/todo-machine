@@ -1,0 +1,24 @@
+.NotFoundPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .NotFoundPage {
+    font-size: 1.5rem;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .NotFoundPage {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+}

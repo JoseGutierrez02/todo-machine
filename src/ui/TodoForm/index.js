@@ -1,8 +1,10 @@
 import React from 'react'
 import './index.css'
+import { useNavigate } from 'react-router-dom'
 
-function TodoForm ({ addTodo, setOpenModal }) {
-  const [newTodoValue, setNewTodoValue] = React.useState('')
+function TodoForm (props) {
+  const navigate = useNavigate()
+  const [newTodoValue, setNewTodoValue] = React.useState(props.defaultTodoText || '')
   const [error, setError] = React.useState(false)
 
   const onSubmit = (event) => {
@@ -11,17 +13,17 @@ function TodoForm ({ addTodo, setOpenModal }) {
       setError('El campo no puede estar vacío')
       return
     }
-    addTodo(newTodoValue)
-    setOpenModal(false)
+    props.submitEvent(newTodoValue)
+    navigate('/')
   }
 
-  const onCancel = () => setOpenModal(false)
+  const onCancel = () => navigate('/')
 
   const onChange = (event) => setNewTodoValue(event.target.value)
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Escribe tu nuevo TODO</label>
+      <label>{props.label}</label>
       <textarea
         placeholder="Cortar cebolla para el almuerzo"
         value={newTodoValue}
@@ -36,7 +38,7 @@ function TodoForm ({ addTodo, setOpenModal }) {
         >
           Cancelar
         </button>
-        <button type='submit' className='TodoForm-button TodoForm-button--add'>Añadir</button>
+        <button type='submit' className='TodoForm-button TodoForm-button--add'>{props.submitText}</button>
       </div>
     </form>
   )
